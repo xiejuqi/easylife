@@ -1,0 +1,320 @@
+2016-04-14 11:53:11,789 - Log4JLogChute initialized using file 'velocity.log'
+2016-04-14 11:53:11,789 - Initializing Velocity, Calling init()...
+2016-04-14 11:53:11,789 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2016-04-14 11:53:11,789 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2016-04-14 11:53:11,789 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:53:11,789 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:53:11,789 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-04-14 11:53:11,789 - Do unicode file recognition:  false
+2016-04-14 11:53:11,789 - FileResourceLoader : adding path '.'
+2016-04-14 11:53:11,789 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-04-14 11:53:11,790 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-04-14 11:53:11,791 - Created '20' parsers.
+2016-04-14 11:53:11,791 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-04-14 11:53:11,791 - Velocimacro : Default library not found.
+2016-04-14 11:53:11,791 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-04-14 11:53:11,791 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-04-14 11:53:11,791 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-04-14 11:53:11,791 - Velocimacro : autoload on : VM system will automatically reload global library macros
+2016-04-14 11:53:11,803 - Log4JLogChute initialized using file 'velocity.log'
+2016-04-14 11:53:11,803 - Log4JLogChute initialized using file 'velocity.log'
+2016-04-14 11:53:11,803 - Did not find resource at: /WEB-INF/velocity.properties
+2016-04-14 11:53:11,803 - Did not find resource at: /WEB-INF/velocity.properties
+2016-04-14 11:53:11,803 - Configuring Velocity with properties at: /velocity/velocity.properties
+2016-04-14 11:53:11,803 - Configuring Velocity with properties at: /velocity/velocity.properties
+2016-04-14 11:53:11,803 - Initializing Velocity, Calling init()...
+2016-04-14 11:53:11,803 - Initializing Velocity, Calling init()...
+2016-04-14 11:53:11,803 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2016-04-14 11:53:11,803 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2016-04-14 11:53:11,803 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2016-04-14 11:53:11,803 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2016-04-14 11:53:11,803 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:53:11,803 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:53:11,803 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:53:11,803 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:53:11,804 - ResourceLoader instantiated: org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:11,804 - ResourceLoader instantiated: org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:11,806 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.StringResourceLoader
+2016-04-14 11:53:11,806 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.StringResourceLoader
+2016-04-14 11:53:11,806 - Creating string repository using class org.apache.velocity.runtime.resource.util.StringResourceRepositoryImpl...
+2016-04-14 11:53:11,806 - Creating string repository using class org.apache.velocity.runtime.resource.util.StringResourceRepositoryImpl...
+2016-04-14 11:53:11,806 - Default repository encoding is UTF-8
+2016-04-14 11:53:11,806 - Default repository encoding is UTF-8
+2016-04-14 11:53:11,806 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2016-04-14 11:53:11,806 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-04-14 11:53:11,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-04-14 11:53:11,807 - Created '20' parsers.
+2016-04-14 11:53:11,807 - Created '20' parsers.
+2016-04-14 11:53:11,807 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-04-14 11:53:11,807 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-04-14 11:53:11,808 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.tools.view.WebappResourceLoader: WebappResourceLoader: Resource 'VM_global_library.vm' not found.
+2016-04-14 11:53:11,808 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.tools.view.WebappResourceLoader: WebappResourceLoader: Resource 'VM_global_library.vm' not found.
+2016-04-14 11:53:11,808 - Velocimacro : Default library not found.
+2016-04-14 11:53:11,808 - Velocimacro : Default library not found.
+2016-04-14 11:53:11,808 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-04-14 11:53:11,808 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-04-14 11:53:11,808 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-04-14 11:53:11,808 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-04-14 11:53:11,808 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-04-14 11:53:11,808 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-04-14 11:53:11,808 - Velocimacro : autoload on : VM system will automatically reload global library macros
+2016-04-14 11:53:11,808 - Velocimacro : autoload on : VM system will automatically reload global library macros
+2016-04-14 11:53:11,863 - Loaded deprecated configuration from: src/main/resources/velocity/velocity-toolbox.xml
+2016-04-14 11:53:11,863 - Loaded deprecated configuration from: src/main/resources/velocity/velocity-toolbox.xml
+2016-04-14 11:53:11,863 - Please upgrade to new "/WEB-INF/tools.xml" format and conventional location. Support for "/WEB-INF/toolbox.xml" format and conventional file name will be removed in a future version.
+2016-04-14 11:53:11,863 - Please upgrade to new "/WEB-INF/tools.xml" format and conventional location. Support for "/WEB-INF/toolbox.xml" format and conventional file name will be removed in a future version.
+2016-04-14 11:53:11,864 - Default tools configuration has been suppressed to avoid conflicts with older application's context and toolbox definition.
+2016-04-14 11:53:11,864 - Default tools configuration has been suppressed to avoid conflicts with older application's context and toolbox definition.
+2016-04-14 11:53:11,870 - Did not find resource at: /WEB-INF/tools.xml
+2016-04-14 11:53:11,870 - Did not find resource at: /WEB-INF/tools.xml
+2016-04-14 11:53:11,875 - Configuring factory with: 
+FactoryConfiguration from 3 sources with 1 properties [deprecationSupportMode -auto-> true; ] and 2 toolboxes: 
+ Toolbox 'application' with 1 properties [scope -auto-> application; ] and 3 tools: 
+  Tool 'date' => org.apache.velocity.tools.generic.DateTool with 1 properties [key -auto-> date; ]
+  Tool 'escape' => org.apache.velocity.tools.generic.EscapeTool with 1 properties [key -auto-> escape; ]
+  Tool 'math' => org.apache.velocity.tools.generic.MathTool with 1 properties [key -auto-> math; ]
+  
+ Toolbox 'request' with 1 properties [scope -auto-> request; ] and 1 tools: 
+  Tool 'cookie' => org.apache.velocity.tools.view.tools.CookieTool with 1 properties [key -auto-> cookie; ]
+  
+ 
+ Source 0: org.apache.velocity.tools.config.FactoryConfiguration(VelocityView.configure(config,factory))
+ Source 1: org.apache.velocity.tools.config.XmlFactoryConfiguration(ServletUtils.getConfiguration(src/main/resources/velocity/velocity-toolbox.xml,ServletContext[,depMode=true]))
+ Source 2: org.apache.velocity.tools.config.FactoryConfiguration(ConfigurationUtils.getAutoLoaded(false))
+
+2016-04-14 11:53:11,875 - Configuring factory with: 
+FactoryConfiguration from 3 sources with 1 properties [deprecationSupportMode -auto-> true; ] and 2 toolboxes: 
+ Toolbox 'application' with 1 properties [scope -auto-> application; ] and 3 tools: 
+  Tool 'date' => org.apache.velocity.tools.generic.DateTool with 1 properties [key -auto-> date; ]
+  Tool 'escape' => org.apache.velocity.tools.generic.EscapeTool with 1 properties [key -auto-> escape; ]
+  Tool 'math' => org.apache.velocity.tools.generic.MathTool with 1 properties [key -auto-> math; ]
+  
+ Toolbox 'request' with 1 properties [scope -auto-> request; ] and 1 tools: 
+  Tool 'cookie' => org.apache.velocity.tools.view.tools.CookieTool with 1 properties [key -auto-> cookie; ]
+  
+ 
+ Source 0: org.apache.velocity.tools.config.FactoryConfiguration(VelocityView.configure(config,factory))
+ Source 1: org.apache.velocity.tools.config.XmlFactoryConfiguration(ServletUtils.getConfiguration(src/main/resources/velocity/velocity-toolbox.xml,ServletContext[,depMode=true]))
+ Source 2: org.apache.velocity.tools.config.FactoryConfiguration(ConfigurationUtils.getAutoLoaded(false))
+
+2016-04-14 11:53:11,880 - Default Content-Type is: text/html; charset=UTF-8
+2016-04-14 11:53:11,880 - Default Content-Type is: text/html; charset=UTF-8
+2016-04-14 11:53:11,882 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:11,882 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:16,445 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:16,445 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:20,823 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:20,823 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:53:43,902 - Please upgrade to new "/WEB-INF/tools.xml" format and conventional location. Support for "/WEB-INF/toolbox.xml" format and conventional file name will be removed in a future version.
+2016-04-14 11:53:43,902 - Please upgrade to new "/WEB-INF/tools.xml" format and conventional location. Support for "/WEB-INF/toolbox.xml" format and conventional file name will be removed in a future version.
+2016-04-14 11:54:34,099 - Log4JLogChute initialized using file 'velocity.log'
+2016-04-14 11:54:34,099 - Initializing Velocity, Calling init()...
+2016-04-14 11:54:34,099 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2016-04-14 11:54:34,099 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2016-04-14 11:54:34,099 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:54:34,099 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:54:34,099 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-04-14 11:54:34,099 - Do unicode file recognition:  false
+2016-04-14 11:54:34,099 - FileResourceLoader : adding path '.'
+2016-04-14 11:54:34,099 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-04-14 11:54:34,099 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-04-14 11:54:34,100 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-04-14 11:54:34,121 - Created '20' parsers.
+2016-04-14 11:54:34,121 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-04-14 11:54:34,121 - Velocimacro : Default library not found.
+2016-04-14 11:54:34,121 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-04-14 11:54:34,121 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-04-14 11:54:34,121 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-04-14 11:54:34,121 - Velocimacro : autoload on : VM system will automatically reload global library macros
+2016-04-14 11:54:34,137 - Log4JLogChute initialized using file 'velocity.log'
+2016-04-14 11:54:34,137 - Log4JLogChute initialized using file 'velocity.log'
+2016-04-14 11:54:34,137 - Did not find resource at: /WEB-INF/velocity.properties
+2016-04-14 11:54:34,137 - Did not find resource at: /WEB-INF/velocity.properties
+2016-04-14 11:54:34,138 - Configuring Velocity with properties at: /velocity/velocity.properties
+2016-04-14 11:54:34,138 - Configuring Velocity with properties at: /velocity/velocity.properties
+2016-04-14 11:54:34,138 - Initializing Velocity, Calling init()...
+2016-04-14 11:54:34,138 - Initializing Velocity, Calling init()...
+2016-04-14 11:54:34,138 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2016-04-14 11:54:34,138 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2016-04-14 11:54:34,138 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2016-04-14 11:54:34,138 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2016-04-14 11:54:34,138 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:54:34,138 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:54:34,138 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:54:34,138 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-04-14 11:54:34,139 - ResourceLoader instantiated: org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:54:34,139 - ResourceLoader instantiated: org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:54:34,140 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.StringResourceLoader
+2016-04-14 11:54:34,140 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.StringResourceLoader
+2016-04-14 11:54:34,140 - Creating string repository using class org.apache.velocity.runtime.resource.util.StringResourceRepositoryImpl...
+2016-04-14 11:54:34,140 - Creating string repository using class org.apache.velocity.runtime.resource.util.StringResourceRepositoryImpl...
+2016-04-14 11:54:34,140 - Default repository encoding is UTF-8
+2016-04-14 11:54:34,140 - Default repository encoding is UTF-8
+2016-04-14 11:54:34,140 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2016-04-14 11:54:34,140 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2016-04-14 11:54:34,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-04-14 11:54:34,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-04-14 11:54:34,141 - Created '20' parsers.
+2016-04-14 11:54:34,141 - Created '20' parsers.
+2016-04-14 11:54:34,142 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-04-14 11:54:34,142 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-04-14 11:54:34,142 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.tools.view.WebappResourceLoader: WebappResourceLoader: Resource 'VM_global_library.vm' not found.
+2016-04-14 11:54:34,142 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.tools.view.WebappResourceLoader: WebappResourceLoader: Resource 'VM_global_library.vm' not found.
+2016-04-14 11:54:34,142 - Velocimacro : Default library not found.
+2016-04-14 11:54:34,142 - Velocimacro : Default library not found.
+2016-04-14 11:54:34,142 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-04-14 11:54:34,142 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-04-14 11:54:34,142 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-04-14 11:54:34,142 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-04-14 11:54:34,142 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-04-14 11:54:34,142 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-04-14 11:54:34,142 - Velocimacro : autoload on : VM system will automatically reload global library macros
+2016-04-14 11:54:34,142 - Velocimacro : autoload on : VM system will automatically reload global library macros
+2016-04-14 11:54:34,193 - Loaded deprecated configuration from: src/main/resources/velocity/velocity-toolbox.xml
+2016-04-14 11:54:34,193 - Loaded deprecated configuration from: src/main/resources/velocity/velocity-toolbox.xml
+2016-04-14 11:54:34,193 - Please upgrade to new "/WEB-INF/tools.xml" format and conventional location. Support for "/WEB-INF/toolbox.xml" format and conventional file name will be removed in a future version.
+2016-04-14 11:54:34,193 - Please upgrade to new "/WEB-INF/tools.xml" format and conventional location. Support for "/WEB-INF/toolbox.xml" format and conventional file name will be removed in a future version.
+2016-04-14 11:54:34,193 - Default tools configuration has been suppressed to avoid conflicts with older application's context and toolbox definition.
+2016-04-14 11:54:34,193 - Default tools configuration has been suppressed to avoid conflicts with older application's context and toolbox definition.
+2016-04-14 11:54:34,199 - Did not find resource at: /WEB-INF/tools.xml
+2016-04-14 11:54:34,199 - Did not find resource at: /WEB-INF/tools.xml
+2016-04-14 11:54:34,204 - Configuring factory with: 
+FactoryConfiguration from 3 sources with 1 properties [deprecationSupportMode -auto-> true; ] and 2 toolboxes: 
+ Toolbox 'application' with 1 properties [scope -auto-> application; ] and 3 tools: 
+  Tool 'date' => org.apache.velocity.tools.generic.DateTool with 1 properties [key -auto-> date; ]
+  Tool 'escape' => org.apache.velocity.tools.generic.EscapeTool with 1 properties [key -auto-> escape; ]
+  Tool 'math' => org.apache.velocity.tools.generic.MathTool with 1 properties [key -auto-> math; ]
+  
+ Toolbox 'request' with 1 properties [scope -auto-> request; ] and 1 tools: 
+  Tool 'cookie' => org.apache.velocity.tools.view.tools.CookieTool with 1 properties [key -auto-> cookie; ]
+  
+ 
+ Source 0: org.apache.velocity.tools.config.FactoryConfiguration(VelocityView.configure(config,factory))
+ Source 1: org.apache.velocity.tools.config.XmlFactoryConfiguration(ServletUtils.getConfiguration(src/main/resources/velocity/velocity-toolbox.xml,ServletContext[,depMode=true]))
+ Source 2: org.apache.velocity.tools.config.FactoryConfiguration(ConfigurationUtils.getAutoLoaded(false))
+
+2016-04-14 11:54:34,204 - Configuring factory with: 
+FactoryConfiguration from 3 sources with 1 properties [deprecationSupportMode -auto-> true; ] and 2 toolboxes: 
+ Toolbox 'application' with 1 properties [scope -auto-> application; ] and 3 tools: 
+  Tool 'date' => org.apache.velocity.tools.generic.DateTool with 1 properties [key -auto-> date; ]
+  Tool 'escape' => org.apache.velocity.tools.generic.EscapeTool with 1 properties [key -auto-> escape; ]
+  Tool 'math' => org.apache.velocity.tools.generic.MathTool with 1 properties [key -auto-> math; ]
+  
+ Toolbox 'request' with 1 properties [scope -auto-> request; ] and 1 tools: 
+  Tool 'cookie' => org.apache.velocity.tools.view.tools.CookieTool with 1 properties [key -auto-> cookie; ]
+  
+ 
+ Source 0: org.apache.velocity.tools.config.FactoryConfiguration(VelocityView.configure(config,factory))
+ Source 1: org.apache.velocity.tools.config.XmlFactoryConfiguration(ServletUtils.getConfiguration(src/main/resources/velocity/velocity-toolbox.xml,ServletContext[,depMode=true]))
+ Source 2: org.apache.velocity.tools.config.FactoryConfiguration(ConfigurationUtils.getAutoLoaded(false))
+
+2016-04-14 11:54:34,209 - Default Content-Type is: text/html; charset=UTF-8
+2016-04-14 11:54:34,209 - Default Content-Type is: text/html; charset=UTF-8
+2016-04-14 11:54:34,211 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:54:34,211 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:54:37,019 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-14 11:54:37,019 - ResourceManager : found /WEB-INF/view/common/404.vm with loader org.apache.velocity.tools.view.WebappResourceLoader
+2016-04-19 10:31:27,236 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:31:27,236 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:31:27,236 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:31:27,236 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:32:10,657 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:32:10,657 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:32:10,657 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:32:10,657 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:38:30,402 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:38:30,402 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:38:30,402 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:38:30,402 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:06,420 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:06,420 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:06,420 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:06,420 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:07,573 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:07,573 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:07,573 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:07,573 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:08,173 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:08,173 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:08,173 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:08,173 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:08,377 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:08,377 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:08,378 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:08,378 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:09,164 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:09,164 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:09,164 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:09,164 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:09,357 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:09,357 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:09,357 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:09,357 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:12,837 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:12,837 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:51:12,837 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:12,837 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:51,924 - ResourceManager : unable to find resource '/common/taglib.vm' in any resource loader.
+2016-04-19 10:51:51,924 - ResourceManager : unable to find resource '/common/taglib.vm' in any resource loader.
+2016-04-19 10:51:51,924 - #parse(): cannot find template '/common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:51:51,924 - #parse(): cannot find template '/common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:52:16,040 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:52:16,040 - ResourceManager : unable to find resource './common/taglib.vm' in any resource loader.
+2016-04-19 10:52:16,040 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:52:16,040 - #parse(): cannot find template './common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:53:00,289 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:53:00,289 - ResourceManager : unable to find resource 'common/taglib.vm' in any resource loader.
+2016-04-19 10:53:00,289 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 10:53:00,289 - #parse(): cannot find template 'common/taglib.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 11:07:21,452 - ResourceManager : unable to find resource '/login/404.vm' in any resource loader.
+2016-04-19 11:07:21,452 - ResourceManager : unable to find resource '/login/404.vm' in any resource loader.
+2016-04-19 11:07:21,452 - #parse(): cannot find template '/login/404.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]
+2016-04-19 11:07:21,452 - #parse(): cannot find template '/login/404.vm', called at /WEB-INF/view/login/login.vm[line 4, column 9]

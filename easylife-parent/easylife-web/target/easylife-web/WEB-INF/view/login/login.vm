@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" manifest="cache.manifest">
+<head>
+	<title>易生活 - 社区电商运营专家 </title>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#loginForm").on('submit',function(){
+				/**密码加密*/
+				var pssword = $('#password').val();
+				var b = new Base64(); 
+				var encodepssword = b.encode(pssword);  
+				$('#password').val(encodepssword);
+			});
+		});
+		function refreshCaptcha() {
+			var _captcha_id = "#img_captcha";
+			$(_captcha_id).attr("src","/easylife-web/captchaCode/create.htm?t=" + Math.random());
+		}
+	</script>
+</head>
+<body>
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="${rc.contextPath}/resources/img/examples/header-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>来自北美洲的西餐.</h1>
+              <p class="lead">一站式采购</p>
+              <a class="btn btn-large btn-primary" href="#">马上注册</a>
+            </div>            
+          </div>
+        </div>
+        <div class="item">
+          <img src="${rc.contextPath}/resources/img/examples/header-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>易生活连锁加盟.</h1>
+              <p class="lead">报名热线：18580045251</p>
+              <a class="btn btn-large btn-primary" href="#">了解更多</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="${rc.contextPath}/resources/img/examples/header-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>加入易生活.</h1>
+              <p class="lead">享受多快好省的快乐采购.</p>
+              <a class="btn btn-large btn-primary" href="#">立即加入</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    <div class="container-login">
+       <form  id="loginForm"	class="form-signin" action="../login/login.htm" method="post">
+	        <h2 class="form-signin-heading">请登录：</h2>
+	        <input type="text" class="input-block-level" placeholder="电子邮箱" name="account" required/>
+	        <input type="password" class="input-block-level" placeholder="密码" name="password" id="password" required/>
+	        <input type="text" class="input-block-level" placeholder="验证码" name="captcha" id="password" required/>
+	        <img title="点击更换" id="img_captcha" onclick="javascript:refreshCaptcha();" src="../captchaCode/create.htm">
+	        	(看不清<a href="javascript:void(0)" onclick="javascript:refreshCaptcha()">换一张)</a>
+	        <label class="checkbox">
+	          <input type="checkbox" value="true" name="rememberMe"> 记住我
+	        </label>
+	        <button class="btn btn-large btn-primary" type='submit'>登录</button>
+	        <span class="text-info"><strong>$!{message_login}</strong></span>
+       </form>
+	</div> 
+ <article class="container">
+    </article>
+    <div class="container marketing">
+      <footer>
+        <p>&copy; 2013 Web前端研究, Good. &middot; <a href="#">学习资料</a> &middot; <a href="#">夏森</a></p>
+      </footer>    
+    </div>
+</body>
+</html>

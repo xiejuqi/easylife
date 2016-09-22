@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引用Spring的多个Schema空间的格式定义文件 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"  
+	xmlns:lang="http://www.springframework.org/schema/lang" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx  
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  
+        http://www.springframework.org/schema/lang
+		http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/jee
+		http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+		
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
+        <!--单个realm使用realm,如果有多个realm，使用realms属性代替-->  
+        <!--realm配置，realm是shiro的桥梁，它主要是用来判断subject是否可以登录及权限等-->  
+        <property name="realm" ref="permissionRealm" />  
+        <property name="sessionManager" ref="sessionManager"/>
+         <!-- 配置缓存 -->
+        <property name="cacheManager" ref="shiroEhcacheManager" />
+        <property name="rememberMeManager" ref="rememberMeManager" />
+    </bean> 
+    
+    <!-- 自定义验证登录和权限 -->
+    <bean id="permissionRealm" class="org.easylife.web.shiro.PermissionRealm">
+    	<property name="authenticationCachingEnabled" value="true" />
+        <property name="authenticationCacheName" value="authenticationCache" />
+        <property name="authorizationCachingEnabled" value="true" />
+        <property name="authorizationCacheName" value="authorizationCache" />
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
+    </bean>
+    
+    <!--shiro过滤器配置，bean的id值须与web中的filter-name的值相同-->  
+    <!-- org.apache.shiro.spring.web.ShiroFilterFactoryBean
+    	  org.easylife.web.shiro.EasylifeFilterFactoryBean
+    -->
+    <bean id="shiroFilter" class="org.easylife.web.shiro.EasylifeFilterFactoryBean">  
+        <property name="securityManager" ref="securityManager" />  
+        <property name="loginUrl" value="/login/login.htm"/>
+        <!-- 没有权限或者失败后跳转的页面 -->  
+        <property name="unauthorizedUrl" value="/login/login.htm" />  
+        <property name="successUrl" value="/index/index.htm"/>
+        <property name="filters">
+            <util:map>
+            	<!-- 多处登录踢出用户 -->
+                <entry key="kickout" value-ref="kickoutSessionControlFilter"/>
+            </util:map>
+        </property>
+        <!-- Shiro连接约束配置,即过滤链的定义 -->  
+        <property name="filterChainDefinitions">  
+            <value>  
+            	/captchaCode/create.htm=anon
+            	/=kickout,user
+            	/login/login.htm=anon
+                <!-- /index/**=authc,roles[admin] -->  
+                /index/*.htm=kickout,user
+                /member/*.htm=kickout,user
+                /*/*.htm=kickout,user
+            </value>  
+        </property>  
+    </bean> 
+    
+    <!-- 凭证匹配器(验证登录密码是否正确) -->
+    <bean id="credentialsMatcher" class="org.easylife.web.shiro.EasylifeCredentiasMatcher">
+        <constructor-arg ref="shiroEhcacheManager"/>
+        <!-- <property name="hashAlgorithmName" value="md5"/>
+        <property name="storedCredentialsHexEncoded" value="true"/>
+        <property name="hashIterations" value="2" /> -->
+    </bean>
+    
+    <!-- Shiro Session管理器 -->
+    <!--org.apache.shiro.session.mgt.DefaultSessionManager	-->
+    <bean id="sessionManager"  class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">  
+    	<!-- 这里的设置会覆盖web.xml中的session超时配置,15000=15秒 -->
+       	<property name="globalSessionTimeout" value="15000" />  
+        <property name="sessionValidationInterval" value="15000" />  
+        <property name="sessionValidationSchedulerEnabled" value="true" />
+    </bean>  
+    
+    <!-- 定义缓存 -->
+    <bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">  
+        <property name="cacheManagerConfigFile" value="classpath:/shiro/ehcache-shiro.xml" />  
+    </bean>  
+    
+    <!-- remenberMe配置 -->
+   <bean id="rememberMeCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+       <constructor-arg value="rememberMe" />
+       <property name="httpOnly" value="true" />
+       <!-- 默认记住7天(单位:秒)604800 -->
+       <property name="maxAge" value="604800" />
+   </bean>
+   
+   <!-- rememberMe管理器 -->
+   <bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+       <property name="cipherKey" value="#{T(org.apache.shiro.codec.Base64).decode('4AvVhmFLUs0KTA3Kprsdag==')}" />
+       <property name="cookie" ref="rememberMeCookie" />
+   </bean>
+   
+   <!-- 踢出用户的过滤器 -->
+   <bean id="kickoutSessionControlFilter" class="org.easylife.web.shiro.KickoutSessionControlFilter">
+        <property name="cacheManager" ref="shiroEhcacheManager"/>
+        <property name="sessionManager" ref="sessionManager"/>
+        <!-- 踢出最后登录的人,false表示踢出第一个登录的人,true踢出最后登录的人 -->
+        <property name="kickoutAfter" value="false"/>
+        <!-- 1表示同时允许一个人在线 -->
+        <property name="maxSession" value="1"/>
+        <property name="kickoutUrl" value="/login/login.htm"/>
+    </bean>
+    
+    <!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->    
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/> 
+		
+</beans>

@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gome.xiejuqi</groupId>
+  <artifactId>easylife-parent</artifactId>
+  <version>0.0.1</version>
+  <name>easylife-parent</name>
+  <url>http://maven.apache.org</url>
+  <packaging>pom</packaging>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <!-- ===========================================FRAMEWORK==================================================== -->
+    <!-- Spring  -->
+    <org.springframework.version>3.2.2.RELEASE</org.springframework.version>
+	<org.springframework.asm.version>3.1.2.RELEASE</org.springframework.asm.version>
+	<!-- mybatis -->
+	<org.mybatis.version>3.2.2</org.mybatis.version>
+	<mybatis-spring.version>1.1.1</mybatis-spring.version>
+	<!-- aspectj -->
+	<aspectjweaver.version>1.6.8</aspectjweaver.version>
+	<aspectjrt.version>1.6.8</aspectjrt.version>
+	<!-- shiro -->
+	<org.apache.shiro.verison>1.2.4</org.apache.shiro.verison>	
+	
+	<!-- ===========================================LOG==================================================== -->
+	<!-- log -->
+	<slf4j.version>1.7.5</slf4j.version>
+	<log4j.version>1.2.17</log4j.version>
+	<cglib.version>3.2.1</cglib.version>
+	<com.google.code.gson.version>2.6.2</com.google.code.gson.version>
+	<fastjson.version>1.2.11</fastjson.version>
+	<slf4j-log4j12.version>1.7.5</slf4j-log4j12.version>
+	<commons-lang.version>2.6</commons-lang.version>
+	<commons-beanutils.version>1.9.2</commons-beanutils.version>
+	<commons-httpclient.version>3.0</commons-httpclient.version>
+	<!-- ===========================================DATASOURCE==================================================== -->
+	<!-- mysql driver -->
+	<jdbc.driver.groupId>mysql</jdbc.driver.groupId>
+	<jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
+	<jdbc.driver.version>5.1.22</jdbc.driver.version>
+	<!-- druid -->
+	<com.alibaba.druid.version>1.0.6</com.alibaba.druid.version>
+	<!-- dbcp -->
+	<commons-dbcp.version>1.4</commons-dbcp.version>
+	
+	<!-- ===========================================SERVICE==================================================== -->
+	<!-- zookeeper dubbo -->
+	<dubbo.version>2.5.3</dubbo.version>
+	<zookeeper.version>3.4.5</zookeeper.version>
+	<zkclient.version>0.1</zkclient.version>
+	
+	<!-- rocketmq -->
+	<com.alibaba.rocketmq.version>3.4.9</com.alibaba.rocketmq.version>
+	<!-- activemq -->
+	<org.apache.activemq.version>5.7.0</org.apache.activemq.version>
+	<activemq-pool.version>5.10.0</activemq-pool.version>
+	
+	<!-- ===========================================TEST==================================================== -->
+	<!-- junit -->
+	<junit.version>4.8.2</junit.version>
+	<!-- easymock -->
+	<org.easymock.version>2.5</org.easymock.version>
+	
+	<!-- ===========================================VIEW==================================================== -->
+	<jstl.version>1.2</jstl.version>
+	<servlet-api.version>2.5</servlet-api.version>
+	<jsp-api.version>2.1</jsp-api.version>
+	<org.apache.velocity.version>1.7</org.apache.velocity.version>
+	<org.apache.velocity.tools.version>2.0</org.apache.velocity.tools.version>
+	<commons-logging.version>1.2</commons-logging.version>
+	<org.mortbay.jetty.version>6.1.10</org.mortbay.jetty.version>		
+	
+	<!-- ===========================================GOOGLE==================================================== -->
+	<com.google.guava.version>18.0</com.google.guava.version>
+	
+	<!-- ===========================================XSTREAM==================================================== -->
+	<com.thoughtworks.xstream.version>1.4.1</com.thoughtworks.xstream.version>
+	
+	<!-- ===========================================DIAMOND==================================================== -->
+	<com.taobao.diamond.version>2.0.5.4.taocode-SNAPSHOT</com.taobao.diamond.version>
+	
+	<!-- ===========================================验证码==================================================== -->
+	<com.octo.captcha.version>2.0-alpha-1</com.octo.captcha.version>
+	
+	<!-- ===========================================MODULE==================================================== -->
+	<easylife-web.version>0.0.1</easylife-web.version>
+	<easylife-common.version>0.0.1</easylife-common.version>
+	<easylife-dao.version>0.0.1</easylife-dao.version>
+	<easylife-domain.version>0.0.1</easylife-domain.version>
+	<easylife-facade.version>0.0.1</easylife-facade.version>
+	<easylife-test.version>0.0.1</easylife-test.version>
+	<easylife-service.version>0.0.1</easylife-service.version>
+	<easylife-dubbo.version>0.0.1</easylife-dubbo.version>
+  </properties>
+
+  <modules>
+  	<module>easylife-service</module>
+  	<module>easylife-dao</module>
+  	<module>easylife-domain</module>
+  	<module>easylife-test</module>
+  	<module>easylife-web</module>
+  	<module>easylife-facade</module>
+  	<module>easylife-common</module>
+  	<module>easylife-dubbo</module>
+  </modules>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<!-- ===========================================SPRING==================================================== -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-asm</artifactId>
+			<version>${org.springframework.asm.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>${commons-httpclient.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		
+		<!-- ===========================================ASPECTJ==================================================== -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectjweaver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectjrt.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>${cglib.version}</version>
+		</dependency>
+		
+		<!-- ===========================================SHIRO==================================================== -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${org.apache.shiro.verison}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${org.apache.shiro.verison}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${org.apache.shiro.verison}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${org.apache.shiro.verison}</version>
+		</dependency>
+		
+		
+		<!-- ===========================================SL4J==================================================== -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-log4j12.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${com.google.code.gson.version}</version>
+		</dependency>
+		
+		<!-- ===========================================COMMONS==================================================== -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons-beanutils.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.0</version>
+		</dependency>
+		
+		<!-- ===========================================MYSQL DRIVER==================================================== -->
+		<dependency>
+			<groupId>${jdbc.driver.groupId}</groupId>
+			<artifactId>${jdbc.driver.artifactId}</artifactId>
+			<version>${jdbc.driver.version}</version>
+		</dependency>
+		
+		<!-- ===========================================MYBATIS==================================================== -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${org.mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+		
+		<!-- ===========================================DATASOURCE==================================================== -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${com.alibaba.druid.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.version}</version>
+		</dependency>
+		
+		
+		<!-- ===========================================DUBBO==================================================== -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>${dubbo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>${zookeeper.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>${zkclient.version}</version>
+		</dependency>
+		
+		<!-- ===========================================Rocketmq==================================================== -->
+		<dependency>
+		    <groupId>com.alibaba.rocketmq</groupId>
+		    <artifactId>rocketmq-client</artifactId>
+		    <version>${com.alibaba.rocketmq.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.alibaba.rocketmq</groupId>
+		    <artifactId>rocketmq-all</artifactId>
+		    <version>${com.alibaba.rocketmq.version}</version>
+		    <type>pom</type>
+		</dependency>
+		
+		<!-- ===========================================ACTIVEMQ==================================================== -->
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-core</artifactId>
+		    <version>${org.apache.activemq.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-pool</artifactId>
+		    <version>${activemq-pool.version}</version>
+		</dependency>
+		
+		<!-- ===========================================TEST==================================================== -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>${org.easymock.version}</version>
+		</dependency>
+		
+		<!-- ===========================================VIEW==================================================== -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>${org.apache.velocity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>${org.apache.velocity.tools.version}</version>
+		</dependency>
+		
+		<!-- ===========================================GOOGLE==================================================== -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${com.google.guava.version}</version>
+		</dependency>
+		
+		<!-- ===========================================XSTREAM==================================================== -->
+		<dependency>
+		    <groupId>com.thoughtworks.xstream</groupId>
+		    <artifactId>xstream</artifactId>
+		    <version>${com.thoughtworks.xstream.version}</version>
+		</dependency>
+		
+		<!-- ===========================================DIAMOND==================================================== -->
+		<dependency>
+		  	<groupId>com.taobao.diamond</groupId>
+		  	<artifactId>diamond-client</artifactId>
+		  	<version>${com.taobao.diamond.version}</version>
+		</dependency>
+		<dependency>
+		  	<groupId>com.taobao.diamond</groupId>
+		  	<artifactId>diamond-utils</artifactId>
+		  	<version>${com.taobao.diamond.version}</version>
+		</dependency>
+		
+		
+		<!-- ===========================================MODULE==================================================== -->
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-web</artifactId>
+			<version>${easylife-web.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-common</artifactId>
+			<version>${easylife-common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-dao</artifactId>
+			<version>${easylife-dao.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-domain</artifactId>
+			<version>${easylife-domain.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-facade</artifactId>
+			<version>${easylife-facade.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-test</artifactId>
+			<version>${easylife-test.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-service</artifactId>
+			<version>${easylife-service.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gome.xiejuqi</groupId>
+			<artifactId>easylife-dubbo</artifactId>
+			<version>${easylife-dubbo.version}</version>
+		</dependency>
+		
+		<!-- - -->
+		
+  	</dependencies>
+  </dependencyManagement>
+  
+  <build>
+  	<plugins>
+  		<!-- 配置Jetty服务器插件 -->
+  		<plugin>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>maven-jetty-plugin</artifactId>
+			<version>${org.mortbay.jetty.version}</version>
+		    <configuration>
+				<contextPath>/${easylife.module.contextPath}</contextPath>
+				<scanIntervalSeconds>2</scanIntervalSeconds>
+				<stopKey>foo</stopKey>
+				<stopPort>${easylife.module.stopPort}</stopPort>
+				<connectors>
+					<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+						<port>${easylife.module.port}</port>
+						<maxIdleTime>60000</maxIdleTime>
+					</connector>
+				</connectors>
+			</configuration>
+		</plugin>
+  	</plugins>
+  </build>
+</project>

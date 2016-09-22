@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+#set($layout="common/indexLayout.vm")
+<html lang="zh-CN" manifest="cache.manifest">
+<head>
+	<title>易生活 - 社区电商运营专家 </title>
+</head>
+<body>
+    <h1>你的账号已经在别处登录,您被迫下线,请您重新登录！</h1>
+    <h1>${rc.contextPath}</h1>
+</body>
+</html>

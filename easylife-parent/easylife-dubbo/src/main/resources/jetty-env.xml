@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" 
+     "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+    <New id="pgsqldbcp" class="org.mortbay.jetty.plus.naming.Resource">
+        <Arg>jdbc/pgsqldbcp</Arg>
+        <Arg>
+            <New class="org.apache.commons.dbcp.BasicDataSource">
+                <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+                <Set name="url">jdbc:mysql://127.0.0.1:3306/easylife?useUnicode=true<![CDATA[&amp;]]>characterEncoding=utf8</Set>
+                <Set name="username">root</Set>
+                <Set name="password">woaiweiyi</Set>
+                <Set name="maxActive">10</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>

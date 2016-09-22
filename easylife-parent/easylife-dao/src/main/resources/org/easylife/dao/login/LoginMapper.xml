@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.easylife.dao.login.LoginMapper">
+
+	<resultMap id="MemberResultMap" type="Member">
+		<id property="id" column="ID" />
+		<id property="account" column="ACCOUNT"/>
+		<id property="name" column="NAME" />
+		<id property="password" column="NAME"/>
+		<id property="insertTime" column="PASSWORD"/>
+		<id property="updateTime" column="INSERT_TIME"/>
+	</resultMap>
+	
+	<select id="queryListByEntity" parameterType="Member" resultMap="MemberResultMap">
+		SELECT 
+			ID,
+			ACCOUNT,
+			NAME, 
+			PASSWORD,
+			INSERT_TIME,
+			UPDATE_TIME
+		FROM 
+			MEMBER;
+	</select>
+	
+
+</mapper>

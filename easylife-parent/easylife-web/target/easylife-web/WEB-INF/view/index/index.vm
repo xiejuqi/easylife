@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+#set($layout="common/indexLayout.vm")
+<html lang="zh-CN" manifest="cache.manifest">
+<head>
+	<title>易生活 - 社区电商运营专家 </title>
+</head>
+<body>
+		<h1>sdjflksdjflksdjflksdjl</h1>
+		<h1>dssd${memberPermission.getString()}sddsds</h1>
+		<h1>${memberPermission.getString()}ddd$date.get('yyyy-M-d H:m:s')ddd${memberPermission.getString()}</h1>
+</body>
+</html>

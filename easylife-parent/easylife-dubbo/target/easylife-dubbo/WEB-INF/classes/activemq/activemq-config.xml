@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引用Spring的多个Schema空间的格式定义文件 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"  
+	xmlns:lang="http://www.springframework.org/schema/lang" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx  
+       	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  
+        	http://www.springframework.org/schema/lang
+		http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/jee
+		http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+		
+	<!-- http://haohaoxuexi.iteye.com/blog/1893038 -->
+	
+	<context:property-placeholder location="classpath:activemq/activemq.properties"/>
+	
+	<!-- 真正可以产生Connection的ConnectionFactory，由对应的 JMS服务厂商提供-->  
+    <bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">  
+        <property name="brokerURL" value="tcp://localhost:61616"/>  
+        <property name="userName" value="admin"/>
+    	<property name="password"  value="admin"/>
+    </bean>  
+    
+    <!-- 
+		SingleConnectionFactory对于建立JMS服务器链接的请求会一直返回同一个链接 
+		CachingConnectionFactory继承了SingleConnectionFactory，所以它拥有SingleConnectionFactory的所有功能，
+		同时它还新增了缓存功能，它可以缓存Session、MessageProducer和MessageConsumer
+	-->
+    <bean id="jsmConnectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">  
+        <!-- 目标ConnectionFactory对应真实的可以产生JMS Connection的ConnectionFactory -->  
+        <property name="targetConnectionFactory" ref="targetConnectionFactory"/>  
+    </bean>  
+    
+    <!-- 可以用来将Connection、Session和MessageProducer池化，这样可以大大的减少资源消耗 -->
+    <bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">  
+    	<property name="connectionFactory" ref="targetConnectionFactory"/>  
+    	<property name="maxConnections" value="10"/>  
+	</bean> 
+	
+	<!--这个是队列目的地，点对点的-->  
+	<bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">  
+    	<constructor-arg>  
+        	<value>easylife_member</value>  
+    	</constructor-arg>  
+	</bean>   
+	
+	<!--这个是主题目的地，一对多的-->  
+	<bean id="topicDestination" class="org.apache.activemq.command.ActiveMQTopic">  
+    	<constructor-arg value="easylife_topic"/>  
+	</bean>  
+	
+	<!-- 事务 -->
+	<bean id="jmsTransactionManager"
+		class="org.springframework.jms.connection.JmsTransactionManager">
+		<property name="connectionFactory" ref="jsmConnectionFactory" />
+	</bean>
+
+	<!-- MQ消息发送模板配置 -->
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="jsmConnectionFactory" />
+		<property name="pubSubDomain" value="false" />
+		<property name="defaultDestination" ref="queueDestination"/>
+	</bean>
+	
+	<!-- 易生活消息监听器(Queue) -->  
+	<bean id="easylifeMessageListener" class="org.easylife.jms.listener.EasylifeMessageListener"/>  
+	
+	<!-- 易生活消息监听器(Topic) --> 
+	<bean id="easylifeTopicListener" class="org.easylife.jms.listener.EasylifeTopicgeListener"/>  
+	
+	<bean id="easylifeTopicListener2" class="org.easylife.jms.listener.EasylifeTopicgeListener2"/> 
+	
+	<!-- 消息监听容器(Queue) -->  
+	<bean id="jmsContainer"  class="org.springframework.jms.listener.DefaultMessageListenerContainer">  
+    	<property name="connectionFactory" ref="jsmConnectionFactory" />  
+    	<property name="destination" ref="queueDestination" />  
+    	<property name="messageListener" ref="easylifeMessageListener" />  
+	</bean>
+	
+	<!-- 消息监听容器(Topic) -->  
+	<bean id="jmsTopicContainer"  class="org.springframework.jms.listener.DefaultMessageListenerContainer">  
+    	<property name="connectionFactory" ref="jsmConnectionFactory" />  
+    	<property name="destination" ref="topicDestination" />  
+    	<property name="messageListener" ref="easylifeTopicListener" />  
+	</bean>
+	
+	<bean id="jmsTopicContainer2"  class="org.springframework.jms.listener.DefaultMessageListenerContainer">  
+    	<property name="connectionFactory" ref="jsmConnectionFactory" />  
+    	<property name="destination" ref="topicDestination" />  
+    	<property name="messageListener" ref="easylifeTopicListener2" />  
+	</bean>
+	
+</beans>

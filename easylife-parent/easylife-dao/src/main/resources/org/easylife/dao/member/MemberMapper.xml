@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.easylife.dao.member.MemberMapper">
+
+	<resultMap id="MemberResultMap" type="Member">
+		<id property="id" column="ID" />
+		<id property="account" column="ACCOUNT"/>
+		<id property="name" column="NAME" />
+		<id property="password" column="PASSWORD"/>
+		<id property="pid" column="PID"/>
+		<id property="email" column="EMAIL"/>
+		<id property="tel" column="TEL"/>
+		<id property="sex" column="SEX"/>
+		<id property="active" column="ACTIVE"/>
+		<id property="accountStatus" column="ACCOUNT_STATUS"/>
+		<id property="insertBy" column="INSERT_BY"/>
+		<id property="insertTime" column="INSERT_TIME"/>
+		<id property="updateBy" column="UPDATE_BY"/>
+		<id property="updateTime" column="UPDATE_TIME"/>
+		<collection property="roles" ofType="ROLE">
+			<result property="roleId" column="ROLE_ID"/>
+			<result property="code" column="CODE"/>
+			<result property="name" column="ROLE_NAME"/>
+			<result property="description" column="ROLE_DESCRIPTION"/>
+			<collection property="permissions" ofType="PERMISSION">
+				<result property="permissionId" column="PERMISSION_ID"/>
+				<result property="name" column="PERMISSION_NAME"/>
+				<result property="parentId" column="PARENT_ID"/>
+				<result property="description" column="PERMISSION_DESCRIPTION"/>
+				<result property="href" column="HREF"/>
+				<result property="visible" column="VISIBLE"/>
+				<result property="type" column="TYPE"/>
+				<result property="icon" column="ICON"/>
+				<result property="cssClass" column="CSS_CLASS"/>
+				<result property="permission" column="PERMISSION"/>
+  			</collection>
+		</collection>
+	</resultMap>
+	
+	<select id="pageQueryEntity" parameterType="Member" resultMap="MemberResultMap">
+		SELECT 
+			A.ID,
+			A.ACCOUNT,
+			A.NAME, 
+			A.PASSWORD,
+			A.PID,
+			A.EMAIL,
+		    A.TEL,
+			A.SEX,
+			A.ACTIVE,
+			A.ACCOUNT_STATUS,
+			A.INSERT_BY,
+			A.INSERT_TIME,
+			A.UPDATE_BY,
+			A.UPDATE_TIME,
+			C.ID AS ROLE_ID,
+			C.CODE,
+			C.NAME AS ROLE_NAME,
+			C.DESCRIPTION AS ROLE_DESCRIPTION,
+			E.ID AS PERMISSION_ID,
+			E.NAME AS PERMISSION_NAME,
+			E.PARENT_ID,
+			E.DESCRIPTION AS PERMISSION_DESCRIPTION,
+			E.HREF,
+			E.VISIBLE,
+			E.TYPE,
+			E.ICON,
+			E.CSS_CLASS,
+			E.PERMISSION
+		FROM 
+			MEMBER A ,
+		    MEMBER_ROLE B,
+		    ROLE C,
+		    ROLE_PERMISSION D,
+		    PERMISSION E
+		WHERE
+   			A.ID=B.MEMBER_ID
+		AND
+			B.ROLE_ID=C.ID
+		AND C.ID=D.ROLE_ID
+		AND D.PERMISSION_ID=E.ID
+		<if test="account != null and account != ''">
+			AND A.ACCOUNT=${account}
+		</if>
+		<include refid="Common.mysqlOrderBySql" />
+		<include refid="Common.mysqlPageineSql" />
+	</select>
+	
+	<select id="pageQueryEntityCount" parameterType="Member" resultType="java.lang.Integer">
+		SELECT 
+			COUNT(1)
+		FROM 
+			MEMBER
+		<where>
+			<if test="account != null and account != ''">
+				AND ACCOUNT=${account}
+			</if>	
+		</where>
+	</select>
+	
+	<update id="updateEntity" parameterType="Member" >
+    	UPDATE MEMBER
+	    <set >
+	      <if test="account != null" >
+	        ACCOUNT = #{account,jdbcType=VARCHAR},
+	      </if>
+	      <if test="name != null" >
+	        NAME = #{name,jdbcType=VARCHAR},
+	      </if>
+	      <if test="password != null" >
+	        PASSWORD = #{password,jdbcType=VARCHAR},
+	      </if>
+	      <if test="pid != null" >
+	        PID = #{pid,jdbcType=VARCHAR},
+	      </if>
+	      <if test="email != null" >
+	        EMAIL = #{email,jdbcType=VARCHAR},
+	      </if>
+	      <if test="tel != null" >
+	        TEL = #{tel,jdbcType=VARCHAR},
+	      </if>
+	      <if test="sex != null" >
+	        SEX = #{sex,jdbcType=VARCHAR},
+	      </if>
+	      <if test="active != null" >
+	        ACTIVE = #{active,jdbcType=VARCHAR},
+	      </if>
+	      <if test="accountStatus != null" >
+	        ACCOUNT_STATUS = #{accountStatus,jdbcType=VARCHAR},
+	      </if>
+	      <if test="insertBy != null" >
+	        INSERT_BY = #{insertBy,jdbcType=VARCHAR},
+	      </if>
+	      <if test="insertTime != null" >
+	        INSERT_TIME = #{insertTime,jdbcType=TIMESTAMP},
+	      </if>
+	      <if test="updateBy != null" >
+	        UPDATE_BY = #{updateBy,jdbcType=VARCHAR},
+	      </if>
+	      <if test="updateTime != null" >
+	        UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+	      </if>
+	    </set>
+      	<include refid="Update_By_Example_Where_Clause" />
+  	</update>
+  
+  	<sql id="Update_By_Example_Where_Clause" >
+		 WHERE 1 = 1
+		 <if test="account != null" >
+	          AND	ACCOUNT = #{account,jdbcType=VARCHAR}
+	      </if>
+  	</sql>
+</mapper>

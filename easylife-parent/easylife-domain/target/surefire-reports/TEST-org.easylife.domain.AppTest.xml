@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.026" errors="0" skipped="0" tests="1" name="org.easylife.domain.AppTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.7.0_45\jre\bin"/>
+    <property name="java.vm.version" value="24.45-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\spirngWorkspace\easylife-parent\easylife-domain"/>
+    <property name="java.runtime.version" value="1.7.0_45-b18"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="E:\spirngWorkspace\easylife-parent\easylife-domain"/>
+    <property name="java.endorsed.dirs" value="D:\Program Files\Java\jdk1.7.0_45\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="E:\spirngWorkspace\easylife-parent\easylife-domain\target\surefire\surefirebooter7583530013091446059.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\xiejuqi\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.7.0_45\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\NetSarang;D:\Program Files (x86)\IBM\WebSphere MQ\java\lib64;D:\Program Files (x86)\IBM\WebSphere MQ\java\lib;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_45\bin;D:\Program Files\Java\jdk1.7.0_45\jre\bin;D:\Program Files (x86)\apache-maven-3.0.3\bin;D:\Program Files\TortoiseSVN\bin;D:\Program Files\ATI Technologies\ATI.ACE\Core-Static;d:\Program Files (x86)\Oracle\Instant Client\bin;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files\MySQL\MySQL Server 5.5\bin;D:\Program Files (x86)\IBM\WebSphere MQ\bin64;D:\Program Files (x86)\IBM\WebSphere MQ\bin;D:\Program Files (x86)\IBM\WebSphere MQ\tools\c\samples\bin;D:\Program Files (x86)\nodejs\;D:\Program Files (x86)\VisualSVN Server\bin;D:\Program Files (x86)\Git\Git\bin;C:\Program Files (x86)\Common Files\NetSarang;D:\Program Files (x86)\IBM\WebSphere MQ\java\lib64;D:\Program Files (x86)\IBM\WebSphere MQ\java\lib;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.7.0_45\bin;D:\Program Files\Java\jdk1.7.0_45\jre\bin;D:\Program Files (x86)\apache-maven-3.0.3\bin;D:\Program Files\TortoiseSVN\bin;D:\Program Files\ATI Technologies\ATI.ACE\Core-Static;d:\Program Files (x86)\Oracle\Instant Client\bin;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;D:\Program Files\MySQL\MySQL Server 5.5\bin;D:\Program Files (x86)\IBM\WebSphere MQ\bin64;D:\Program Files (x86)\IBM\WebSphere MQ\bin;D:\Program Files (x86)\IBM\WebSphere MQ\tools\c\samples\bin;C:\Users\xiejuqi\AppData\Roaming\npm;."/>
+    <property name="surefire.test.class.path" value="E:\spirngWorkspace\easylife-parent\easylife-domain\target\test-classes;E:\spirngWorkspace\easylife-parent\easylife-domain\target\classes;D:\Tools\Maven\m2\junit\junit\4.8.2\junit-4.8.2.jar;D:\Tools\Maven\m2\org\easymock\easymock\2.5\easymock-2.5.jar;E:\spirngWorkspace\easylife-parent\easylife-common\target\easylife-common-0.0.1.jar;D:\Tools\Maven\m2\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;D:\Tools\Maven\m2\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Tools\Maven\m2\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;D:\Tools\Maven\m2\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Tools\Maven\m2\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;D:\Tools\Maven\m2\org\aspectj\aspectjweaver\1.6.8\aspectjweaver-1.6.8.jar;D:\Tools\Maven\m2\org\aspectj\aspectjrt\1.6.8\aspectjrt-1.6.8.jar;D:\Tools\Maven\m2\cglib\cglib\3.2.1\cglib-3.2.1.jar;D:\Tools\Maven\m2\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;D:\Tools\Maven\m2\org\apache\ant\ant\1.9.4\ant-1.9.4.jar;D:\Tools\Maven\m2\org\apache\ant\ant-launcher\1.9.4\ant-launcher-1.9.4.jar;D:\Tools\Maven\m2\org\springframework\spring-context\3.2.2.RELEASE\spring-context-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\org\springframework\spring-aop\3.2.2.RELEASE\spring-aop-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Tools\Maven\m2\org\springframework\spring-beans\3.2.2.RELEASE\spring-beans-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\org\springframework\spring-core\3.2.2.RELEASE\spring-core-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\org\springframework\spring-expression\3.2.2.RELEASE\spring-expression-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\com\google\guava\guava\18.0\guava-18.0.jar;D:\Tools\Maven\m2\com\thoughtworks\xstream\xstream\1.4.1\xstream-1.4.1.jar;D:\Tools\Maven\m2\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;D:\Tools\Maven\m2\xpp3\xpp3_min\1.1.4c\xpp3_min-1.1.4c.jar;D:\Tools\Maven\m2\com\alibaba\fastjson\1.2.11\fastjson-1.2.11.jar;D:\Tools\Maven\m2\org\apache\shiro\shiro-core\1.2.4\shiro-core-1.2.4.jar;D:\Tools\Maven\m2\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;D:\Tools\Maven\m2\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\xiejuqi"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="xiejuqi"/>
+    <property name="java.class.path" value="E:\spirngWorkspace\easylife-parent\easylife-domain\target\test-classes;E:\spirngWorkspace\easylife-parent\easylife-domain\target\classes;D:\Tools\Maven\m2\junit\junit\4.8.2\junit-4.8.2.jar;D:\Tools\Maven\m2\org\easymock\easymock\2.5\easymock-2.5.jar;E:\spirngWorkspace\easylife-parent\easylife-common\target\easylife-common-0.0.1.jar;D:\Tools\Maven\m2\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;D:\Tools\Maven\m2\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\Tools\Maven\m2\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;D:\Tools\Maven\m2\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Tools\Maven\m2\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;D:\Tools\Maven\m2\org\aspectj\aspectjweaver\1.6.8\aspectjweaver-1.6.8.jar;D:\Tools\Maven\m2\org\aspectj\aspectjrt\1.6.8\aspectjrt-1.6.8.jar;D:\Tools\Maven\m2\cglib\cglib\3.2.1\cglib-3.2.1.jar;D:\Tools\Maven\m2\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;D:\Tools\Maven\m2\org\apache\ant\ant\1.9.4\ant-1.9.4.jar;D:\Tools\Maven\m2\org\apache\ant\ant-launcher\1.9.4\ant-launcher-1.9.4.jar;D:\Tools\Maven\m2\org\springframework\spring-context\3.2.2.RELEASE\spring-context-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\org\springframework\spring-aop\3.2.2.RELEASE\spring-aop-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\Tools\Maven\m2\org\springframework\spring-beans\3.2.2.RELEASE\spring-beans-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\org\springframework\spring-core\3.2.2.RELEASE\spring-core-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\org\springframework\spring-expression\3.2.2.RELEASE\spring-expression-3.2.2.RELEASE.jar;D:\Tools\Maven\m2\com\google\guava\guava\18.0\guava-18.0.jar;D:\Tools\Maven\m2\com\thoughtworks\xstream\xstream\1.4.1\xstream-1.4.1.jar;D:\Tools\Maven\m2\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;D:\Tools\Maven\m2\xpp3\xpp3_min\1.1.4c\xpp3_min-1.1.4c.jar;D:\Tools\Maven\m2\com\alibaba\fastjson\1.2.11\fastjson-1.2.11.jar;D:\Tools\Maven\m2\org\apache\shiro\shiro-core\1.2.4\shiro-core-1.2.4.jar;D:\Tools\Maven\m2\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;D:\Tools\Maven\m2\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk1.7.0_45\jre"/>
+    <property name="sun.java.command" value="E:\spirngWorkspace\easylife-parent\easylife-domain\target\surefire\surefirebooter7583530013091446059.jar E:\spirngWorkspace\easylife-parent\easylife-domain\target\surefire\surefire1539754226668497877tmp E:\spirngWorkspace\easylife-parent\easylife-domain\target\surefire\surefire6178672404248902162tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_45"/>
+    <property name="java.ext.dirs" value="D:\Program Files\Java\jdk1.7.0_45\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.7.0_45\jre\lib\resources.jar;D:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar;D:\Program Files\Java\jdk1.7.0_45\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.7.0_45\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.7.0_45\jre\lib\jce.jar;D:\Program Files\Java\jdk1.7.0_45\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.7.0_45\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.7.0_45\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="D:\Tools\Maven\m2"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0" classname="org.easylife.domain.AppTest" name="testApp"/>
+</testsuite>

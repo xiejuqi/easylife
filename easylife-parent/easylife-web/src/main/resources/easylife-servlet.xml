@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	 xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+	http://www.springframework.org/schema/context 
+	 http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd 
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-3.2.xsd
+	http://www.springframework.org/schema/jee
+	http://www.springframework.org/schema/jee/spring-jee-3.0.xsd"
+	>
+
+	<!-- 扫描控制器 -->
+    <context:component-scan base-package="org.easylife.web" />
+    
+    <!-- 系统属性配置文件 -->
+    <context:property-placeholder location="classpath:application.properties"/>
+    
+    <!-- 集成Veloctiy -->
+	<bean id="velocityConfigurer"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="WEB-INF/view" />
+		<property name="configLocation" value="classpath:velocity/velocity.properties" />
+		<property name="velocityProperties">
+			<props>
+				<prop key="input.encoding">utf-8</prop>
+				<prop key="output.encoding">utf-8</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 配置视图的显示 -->  	 
+	<!-- org.springframework.web.servlet.view.velocity.VelocityViewResolver -->
+    <bean id="ViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">  
+        <property name="prefix" value="/" /><!-- 视图文件的前缀，即存放的路径 -->  
+        <property name="suffix" value=".vm" /><!-- 视图文件的后缀名 -->  
+        <!-- <property name="toolboxConfigLocation" value="classpath:velocity-toolbox.xml" /> --><!--toolbox配置文件路径-->  
+        <property name="dateToolAttribute" value="date" /><!--日期函数名称-->  
+        <property name="numberToolAttribute" value="number" /><!--数字函数名称-->  
+        <property name="contentType" value="text/html;charset=UTF-8" />  
+        <property name="exposeSpringMacroHelpers" value="true" /><!--是否使用spring对宏定义的支持-->  
+        <property name="exposeRequestAttributes" value="true" /><!--是否开放request属性-->  
+        <property name="exposeSessionAttributes" value="true" /><!--是否开放session属性-->  
+        <property name="requestContextAttribute" value="rc"/><!--request属性引用名称-->  
+        <property name="layoutUrl" value="common/taglib.vm"/><!--指定layout文件-->  
+    </bean>  
+    
+    <!-- 配置根路径跳转至主页 -->
+    <mvc:view-controller path="/" view-name="redirect:/index"/>
+    <mvc:resources location="/resources/" mapping="/resources/**"/>
+    
+    <mvc:annotation-driven>
+		<mvc:message-converters>
+			<ref bean="fastJsonHttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+    
+    <bean id="fastJsonHttpMessageConverter"
+		class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+			     <value>text/html;charset=UTF-8</value>
+				<value>application/json;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+    
+    <!-- 使用注解的Shiro配置时可以启用这个配置 -->
+   <!-- <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">  
+    	<property name="securityManager" ref="securityManager"/>  
+   </bean> -->
+   
+   <!-- 拦截器组，注意调用顺序 -->
+   <!-- <mvc:interceptors>  
+		<mvc:interceptor>  
+	        <mvc:mapping path="/index/index.htm"/>  
+	        定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的  
+	        <bean class="org.easylife.web.filter.EasylifeInterceptor"/>
+	    </mvc:interceptor>
+	    <mvc:interceptor>  
+	        <mvc:mapping path="/index/index.htm"/>  
+	        定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的  
+	        <bean class="org.easylife.web.filter.EasylifeInterceptor2"/>
+	    </mvc:interceptor>
+	</mvc:interceptors>  -->
+    
+</beans> 

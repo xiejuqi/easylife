@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.gome.xiejuqi</groupId>
+    <artifactId>easylife-parent</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  
+  <artifactId>easylife-dao</artifactId>
+  <name>easylife-dao</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencies>
+  
+  	<!-- ===========================================SPRING==================================================== -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<exclusions>
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-beans</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<scope>test</scope>
+	</dependency>
+	
+	<!-- ===========================================MYBATIS==================================================== -->
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib</artifactId>
+	</dependency>
+	
+	<!-- ===========================================MYSQL==================================================== -->
+	<dependency>
+		<groupId>${jdbc.driver.groupId}</groupId>
+		<artifactId>${jdbc.driver.artifactId}</artifactId>
+	</dependency>
+	
+	<!-- ===========================================DATASOURCE==================================================== -->
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>druid</artifactId>
+	</dependency>
+		
+    <!-- ===========================================MODULE==================================================== -->
+	<dependency>
+		<groupId>com.gome.xiejuqi</groupId>
+		<artifactId>easylife-common</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>com.gome.xiejuqi</groupId>
+		<artifactId>easylife-domain</artifactId>
+	</dependency>
+  </dependencies>
+</project>

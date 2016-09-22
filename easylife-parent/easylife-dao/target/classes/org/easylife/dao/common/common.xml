@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Common">
+
+	<!-- MySql 分页 -->
+	<sql id="mysqlPageineSql">
+		<if test="isPage == true">
+			LIMIT #{pageSize} OFFSET #{posStart}
+		</if>
+	</sql>
+	
+	<!-- MySql OrderBy -->
+	<sql id="mysqlOrderBySql">
+		<if test="isOrderBy == true">
+			<choose>
+				<when test="null!=orderByType and ''!=orderByType">
+					<if test="null!=orderCols and ''!=orderCols">
+						ORDER BY ${orderCols} ${orderByType}
+					</if>
+				</when>
+				<when test="null==orderCols or ''==orderCols">
+					ORDER BY {orderCols}	 DESC
+				</when>
+			</choose>
+	  	</if>
+	</sql>
+
+
+	<!-- ORACLE 分页 start -->
+	<sql id="oraclePaginationStart">
+    	<![CDATA[
+   			SELECT * FROM (SELECT ROW_.*, ROWNUM ROWNUM_ FROM (
+  		]]>
+	</sql>
+
+	<!-- ORACLE 分页 end -->
+	<sql id="oraclePaginationEnd">
+   	 	<![CDATA[
+   			)ROW_  ) WHERE ROWNUM_ >= #{startRow} AND  ROWNUM_ <= #{endRow}
+  		]]>
+	</sql>
+
+</mapper>

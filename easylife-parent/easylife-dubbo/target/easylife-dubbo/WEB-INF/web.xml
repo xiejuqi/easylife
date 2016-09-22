@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- 指定Spring主配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+    
+    <!-- 指定Log4j配置文件 -->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name >
+        <param-value>classpath:log4j/log4j.properties</param-value >
+    </context-param>
+    
+    <listener>   
+        <listener-class>   
+        	org.springframework.web.util.Log4jConfigListener  
+         </listener-class>   
+    </listener>
+	
+	<listener>
+		<description>
+			主要负责处理由JavaBeans Introspector的使用而引起的缓冲泄露
+		</description>
+		<listener-class>
+			org.springframework.web.util.IntrospectorCleanupListener
+		</listener-class>
+	</listener>
+	
+	<listener>
+		<description>Spring监听</description>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+</web-app>

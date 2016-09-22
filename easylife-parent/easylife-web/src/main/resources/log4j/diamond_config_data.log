@@ -1,0 +1,167 @@
+08-03 15:09:47 - dataId=oms-so ,group=oms-so ,content=#不用发送SO站点
+doNotSendSOOrderSites=gomeMovieSite,gomeLotterySite
+#0元发票站点
+zeroInvoiceSites=jrCrowdfundingWinningSite
+
+#1元发票站点
+oneInvoiceSites=jrCrowdfundingWinningSite
+
+#海外购支付方式
+omsHWGPaymentMethod=\KJYL1=D,\
+                     KJYL2=E,\
+                     KJYL3=F,\
+                     KJZFB1=G,\
+                     KJZFB2=H,\
+                     KJZFB3=I,\
+                     KJYYT1=J,\
+                     KJYYT2=K,\
+                     KJYYT3=R,\
+                     WXGJ1=L,\
+                     WXGJ2=M,\
+                     WXGJ3=N,\
+                     WXGJ4=O
+
+
+
+#转发正向TNT
+so_ordertype=SO,EO,PS,RSO,SPS
+#转发逆向TNT
+ro_ordertype=RO,PR,RPR,SPR
+#激活店铺卷
+coo8_url=http://interfaceuat.coupon.coo8.com/hessian/coupon
+#生产
+#coo8_url=http://interface.coupon.coo8.com/hessian/coupon
+#妥投即确认收货站点
+delivered_confirmFlag=chongzhiSite,gomeLotterySite,gomeMovieSite,discountTicket,discountTicketApp,discountTicketWap,renovationSite,xinyewuxxwdSite,tmallHomeSite,tmallNathomeSite,tmallBenqSite,tmallElectroluxSite,tmallZhenlifangSite,tmallAicladSite,tmallBluehorseSite,tmallSanyoSite,tmallGuomeiSite,cnpSite,d2Site,fabSite,cgpcSite,vsSite,d2GroupSite,gomeSellSite,newEggSite,coo8Site,gameSite,caipiaoSite,chongzhiSite,egogoalSite,jinxiangSite,xinyewuxxwdSite,xinyewuSite,jrFreeSite,jrCrowdfundingSite,jrCrowdfundingWinningSite,guangdonggpcSite,3dSite,gomeArtSite,gomeDepositSite,jingpaiSite,yangguangSite
+#drag对应中文
+dragonState=3AP\=\u0033\u0050\u004c\u53ef\u914d\u9001,\
+                       3RJ\=\u0033\u0050\u004c\u4e0d\u53ef\u914d\u9001,\
+                       AC\=\u914d\u9001\u6d3e\u5de5\u5b8c\u6210,\
+                       AL\=\u8ba2\u5355\u8d85\u671f\u62a5\u8b66,\
+                       ARV\=\u8ba2\u5355\u8d85\u671f\u62d2\u6536,\
+                       AU\=\u8ba2\u5355\u5f85\u590d\u6838,\
+                       BH\=\u8865\u8d27\u4e2d,\
+                       BP\=\u8ba2\u5355\u5df2\u5236\u5355,\
+                       CCO\=\u5ba2\u6237\u786e\u8ba4\u8ba2\u5355,\
+                       CIO\=\u5220\u9664\u5efa\u6863,\
+                       CL\=\u8ba2\u5355\u5df2\u53d6\u6d88,\
+                       CLRV\=\u53d6\u6d88\u8ba2\u5355\u62d2\u6536,\
+                       CO\=\u8ba2\u5355\u5df2\u751f\u6548,\
+                       CSC\=\u53d6\u6d88\u70e7\u5361,\
+                       DA\=\u8ba2\u5355\u53d6\u6d88\u5206\u914d,\
+                       DC\=\u81ea\u751f\u8865\u53d1\u8ba2\u5355\u5b8c\u6210,\
+                       DF\=\u8ba2\u5355\u914d\u9001\u5931\u8d25,\
+                       DH\=\u8ba2\u5355\u5f02\u5e38,\
+                       DHAL\=\u96c6\u56e2\u4e0b\u5355\u5931\u8d25\u9884\u8b66,\
+                       DL\=\u8ba2\u5355\u5df2\u59a5\u6295,\
+                       DLC\=\u8ba2\u5355\u59a5\u6295\u77ed\u4fe1\u56de\u6267,\
+                       DO\=\u8ba2\u5355\u5df2\u51fa\u5206\u62e8\u70b9,\
+                       DRA\=\u8ba2\u5355\u5df2\u51fa\u5206\u62e8\u70b9,\
+                       EC\=\u5206\u5806\u53d6\u6d88,\
+                       EO\=\u5e93\u5185\u64cd\u4f5c\u5f02\u5e38,\
+                       ESC\=\u5df2\u70e7\u5361,\
+                       EX\=\u8ba2\u5355\u5df2\u51fa\u5e93,\
+                       FR\=\u672b\u7aef\u914d\u9001\u5546\u5df2\u6536\u8d27,\
+                       GR\=\u8d27\u7269\u5df2\u5165\u5e93,\
+                       IC\=\u8ba2\u5355\u5b89\u88c5\u5b8c\u6210,\
+                       IOC\=\u5efa\u6863\u5220\u9664\u6210\u529f,\
+                       IP\=\u8ba2\u5355\u5df2\u4e0b\u67b6,\
+                       LH\=\u9001\u8fbe\u5206\u62e8\u70b9,\
+                       LS\=\u8ba2\u5355\u5230\u8fbe\u81ea\u63d0\u70b9,\
+                       MS\=\u8ba2\u5355\u4e22\u4ef6,\
+                       MSC\=\u8ba2\u5355\u4e22\u4ef6\u5df2\u786e\u8ba4,\
+                       NIO\=\u65b0\u6863\u5df2\u5efa\u7acb,\
+                       OC\=\u8ba2\u5355\u5df2\u53d6\u6d88,\
+                       OD\=\u8ba2\u5355\u4e0b\u8f7d\u6210\u529f,\
+                       ODF\=\u5efa\u6863\u5220\u9664\u5931\u8d25,\
+                       OH\=\u8ba2\u5355\u5f85\u5904\u7406,\
+                       OS\=\u8ba2\u5355\u5df2\u51fa\u81ea\u63d0\u70b9,\
+                       PC\=\u5305\u88c5\u5b8c\u6210,\
+                       PDL\=\u8ba2\u5355\u59a5\u6295\u5355\u636e\u56de\u6267,\
+                       POD\=\u8ba2\u5355\u987e\u5ba2\u5df2\u7b7e\u6536,\
+                       POR\=\u8ba2\u5355\u5546\u54c1\u5df2\u91c7\u8d2d,\
+                       PP\=\u8ba2\u5355\u5df2\u5206\u914d,\
+                       PR\=\u5546\u54c1\u5df2\u9884\u7559,\
+                       PS\=\u51c6\u5907\u51fa\u8d27,\
+                       R2C\=\u9000\u8d27\u5bc4\u56de\u7ed9\u5ba2\u6237,\
+                       RAP\=\u9000\u8d27\u8ba2\u5355\u88ab\u63a5\u6536,\
+                       RCF\=\u9000\u8d27\u8ba2\u5355\u5931\u8d25,\
+                       RCO\=\u0045\u0043\u9000\u8d27\u8ba2\u5355\u5df2\u751f\u6548,\
+                       RCP\=\u9000\u8d27\u8ba2\u5355\u5b8c\u6210,\
+                       RDH\=\u9000\u8d27\u8ba2\u5355\u5f02\u5e38,\
+                       RDO\=\u9000\u8d27\u8ba2\u5355\u53d6\u8d27\u9014\u4e2d,\
+                       RFL\=\u9000\u8d27\u5728\u8d28\u68c0\u65f6\u5931\u8d25,\
+                       RFR\=\u53d6\u4ef6\u5931\u8d25,\
+                       RH\=\u8ba2\u5355\u914d\u9001\u7ee7\u7eed,\
+                       RMS\=\u5408\u7ea6\u673a\u6362\u673a\u7ed1\u5b9a,\
+                       ROA\=\u53d1\u7968\u5ba1\u6838\u901a\u8fc7,\
+                       ROR\=\u53d1\u7968\u5ba1\u6838\u4e0d\u901a\u8fc7,\
+                       RPC\=\u5f85\u8f6c\u8fd0\u5305\u88c5,\
+                       RPP\=\u9000\u8d27\u8ba2\u5355\u4e0b\u8f7d,\
+                       RR\=\u5f85\u8f6c\u8fd0,\
+                       RSA\=\u9000\u8d27\u9001\u8fbe\u5206\u62e8\u70b9,\
+                       RSD\=\u9000\u8d27\u79bb\u5f00\u5206\u62e8\u70b9,\
+                       RT\=\u62d2\u6536\u8ba2\u5355\u8fd4\u56de\u5927\u5e93,\
+                       RTA\=\u9000\u8d27\u9001\u8fbe\u81ea\u63d0\u70b9,\
+                       RTD\=\u9000\u8d27\u79bb\u5f00\u81ea\u63d0\u70b9,\
+                       RV\=\u8ba2\u5355\u5168\u90e8\u62d2\u6536,\
+                       RWA\=\u9000\u8d27\u5230\u8fbe\u4e3b\u5e93,\
+                       SA\=\u8ba2\u5355\u81ea\u63d0\u8d85\u671f,\
+                       SC\=\u5206\u62e3\u5b8c\u6210,\
+                       SE\=\u5206\u62e8\u70b9\u5f02\u5e38,\
+                       SS\=\u8fd0\u9001\u7ec8\u6b62,\
+                       STO\=\u8f6c\u8fd0\u51fa\u5e93,\
+                       STS\=\u8f6c\u7ad9\u51fa\u5e93,\
+                       TBP\=\u8c03\u62e8\u5df2\u5236\u5355,\
+                       TDL\=\u8c03\u62e8\u5df2\u5165\u5e93,\
+                       TEX\=\u8c03\u62e8\u5df2\u51fa\u5e93,\
+                       TMS\=\u8c03\u62e8\u5546\u54c1\u4e22\u5931,\
+                       TPC\=\u8c03\u62e8\u5df2\u5305\u88c5,\
+                       UD\=\u8ba2\u5355\u672a\u9001\u8fbe,\
+                       UR\=\u91ca\u653e\u9884\u7559,\
+                       WD\=\u5f85\u624b\u5de5\u5206\u914d,\
+                       WE\=\u7b49\u5f85\u51fa\u5e93,\
+                       ZPP\=\u975e\u6cd5\u72b6\u6001,\
+                       ZPR\=\u975e\u6cd5\u72b6\u6001,\
+                       PCL\=\u53d6\u6d88\u5904\u7406\u4e2d,\
+                       RM\=\u5f85\u5ba2\u6237\u90ae\u5bc4,\
+                       RWA\=\u5f85\u5e97\u94fa\u6536\u8d27
+
+#soa-transaction config
+diamondServer=${diamond.ipList}
+producerGroupName=oms_tntTrans_${oms.topic_postfix}
+consumerGroupName=oms_tntTrans_${oms.topic_postfix}
+soaTransactionTopic=oms_tntTrans_${oms.topic_postfix}
+
+#search的数据库连接
+oms.jdbc.maxIdleTime=1800
+oms.jdbc.maxPoolSize=15
+oms.jdbc.minPoolSize=5
+oms.jdbc.initialPoolSize=5
+oms.jdbc.idleConnectionTestPeriod=0
+
+#modify的数据库连接
+oms.modify.jdbc.maxPoolSize=5
+oms.modify.jdbc.minPoolSize=2
+oms.modify.jdbc.initialPoolSize=2
+oms.modify.jdbc.maxWait=60000
+oms.modify.jdbc.timeBetweenEvictionRunsMillis=60000
+oms.modify.jdbc.minEvictableIdleTimeMillis=300000
+
+#b3pp测试账号
+oms_b3pp_profiles=1108799007,181810396,166250112,100014577815,100014578654,245020206,754442050,216350327,611823046,202693184,100011905173,100014595812,126670385,219267683,924673041,100014577539,100014577797,56103524682,100014577811,100011896963,100014490739,100014577516,100013034051,100014577536,100011897220
+
+#不支持发送邮件或短信的店铺ID
+notSupportSendMsgShopNoList=80001341
+
+#虚拟美通卡站点
+virtualCardSites=gomeVirtualCardSite,mobileVirtualCardSite,wapVirtualCardSite
+#实物美通卡站点
+entityCardSites=gomeEntityCardSite,mobileEntityCardSite,wapEntityCardSite
+#虚拟美通卡生产环境仓库(生产是L1559)
+virtualCardMasLocLive=L582
+
+
+appName=oms_so_orders_modify
+dbKey=omsdb
+
